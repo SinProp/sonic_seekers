@@ -1,7 +1,7 @@
 [REQUIRED] Name: Roberto Goyco Jr
 [REQUIRED] Project Title: Sonic Seekers
 [REQUIRED] Project Stack: MERN
-[REQUIRED] GitHub Repo Link: 
+[REQUIRED] GitHub Repo Link: https://github.com/SinProp/sonic_seekers
 
 [REQUIRED] Project Description: I'm going to build an application that allows for users to find musicians in their area to collaborate with 
 Or hire for gig work. Users will be required to name their top 2 genres of choice, and whether or not they accept work or opportunities outside that genre.
