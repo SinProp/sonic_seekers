@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Router } from "@reach/router";
+import ShowArtist from './components/ShowArtist';
+import UpdateArtist from './components/UpdateArtist';
+import ArtistList from './components/ArtistList';
+import ArtistForm from './components/ArtistForm';
 
+
+// Rendering components through Main.Js in the views folder and reach router
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <ArtistList path="/" />
+        <ArtistForm path="/new-artist" />
+        <ShowArtist path="/artist/:_id" />
+        <UpdateArtist path="/edit/:_id" />
+      </Router>
     </div>
   );
 }

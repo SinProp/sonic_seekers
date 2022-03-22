@@ -1,3 +1,6 @@
+@import url('https://fonts.google.com/specimen/Press+Start+2P#standard-styles');
+@import url('https://fonts.google.com/specimen/Yellowtail');
+
 .App {
   text-align: center;
 }
@@ -35,4 +38,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-name {
+  font-family: 'Yellowtail', cursive;
+  color: whitesmoke;
+}
+
+/* .span {
+  background-color: black;
+
+} */
+
+.Main-background {
+  background-image: url("emcee.jpeg");
+}
+
+.App-input {
+  font-size: x-large;
+}
+
+.hyperlink-color {
+  color: seashell;
 }
