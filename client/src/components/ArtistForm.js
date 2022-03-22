@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, navigate } from "@reach/router";
 import "../App.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 
 const ArtistForm = () => {
@@ -69,7 +71,7 @@ const ArtistForm = () => {
         value={mainSkill}
         />
         </div>
-        <button className="btn btn-success btn-lg" type="submit">Seek other Musicians</button>
+        <button className="btn btn-success margin-top btn-lg" type="submit"><i class="bi bi-music-note"></i> Seek other Musicians</button>
 
     </form>
     </div>

@@ -61,3 +61,16 @@
 .hyperlink-color {
   color: seashell;
 }
+
+.secondary-back {
+  color: black
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.button-align {
+  margin-right: 10px;
+  margin-left: 10px;
+}
