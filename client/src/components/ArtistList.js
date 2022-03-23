@@ -33,7 +33,7 @@ const deleteFilter = (idFromBelow) => {
 
 
     return (
-    <div className="Main-background container text-center">
+    <div className="Main-background container-fluid text-center">
         
 
         <h1 className="App-name"> <span className="span">Sonic Seekers</span> </h1> 
@@ -41,15 +41,16 @@ const deleteFilter = (idFromBelow) => {
         <hr />
         <h2 className="text-center"><Link className="hyperlink-color" to="/new-artist"><i class="bi bi-person-plus-fill"></i> Add an Artist 
         </Link>
-        </h2>        
+        </h2>
+        <h2 className="App-name">Verified Artists: </h2>        
 
-        <table className="table table-hover table-dark table-striped">
+        <table className=" App-name table table-hover table-dark table-striped">
             <thead>
                 <tr>
                     <th scope="col">Artist</th>
                     <th scope="col">Genre Preference</th>
                     <th scope="col">Main Skill</th>
-
+                    <th scope="col">Other Talents</th>
                     <th scope="col">Actions Available</th>
                 </tr>
             </thead>
@@ -61,6 +62,7 @@ const deleteFilter = (idFromBelow) => {
                                 <td>{artist.firstName}</td>
                                 <td>{artist.preferredGenre}</td>
                                 <td>{artist.mainSkill}</td>
+                                <td>{artist.otherTalents}</td>
                                 <td >
                                 <button className="btn button-align btn-danger" onClick={()=>deleteFilter(artist._id)}><i class="bi bi-trash"></i> Delete</button>
                                 <button className="btn button-align btn-primary" onClick={()=>navigate(`/edit/${artist._id}`)}><i class="bi bi-pen"></i> Edit</button>

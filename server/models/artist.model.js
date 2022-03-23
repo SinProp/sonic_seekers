@@ -19,6 +19,11 @@ const ArtistSchema = new mongoose.Schema({
         required:[true, "Tell us where you are most effective"],
         minlength: [5, "The skill description should be at least 5 characters long"],
         },
+
+    otherTalents: {
+        type: String,
+        required:[false, ""]
+    }
     });
 
 

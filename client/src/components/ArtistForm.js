@@ -10,6 +10,7 @@ const ArtistForm = () => {
     const [firstName, setFirstName] = useState("");
     const [preferredGenre, setPreferredGenre] = useState("");
     const [mainSkill, setMainSkill] = useState("");
+    const [otherTalents, setOtherTalents] = useState("");
 
     const [errors, setErrors] = useState("");
     
@@ -20,6 +21,7 @@ const ArtistForm = () => {
             firstName,
             preferredGenre,
             mainSkill,
+            otherTalents,
             
         })
         .then((response) => {
@@ -37,7 +39,7 @@ const ArtistForm = () => {
     return (
     
     // Form setup or front end formatting
-    <div className=" App-name Main-background container text-center">
+    <div className=" App-name Main-background container-fluid text-center">
     <h1 className="App-name">Add Artists</h1> 
     <h3 >Add a new Artist</h3>
     <hr />
@@ -69,6 +71,14 @@ const ArtistForm = () => {
         className="form-control"
         onChange={(e) => setMainSkill(e.target.value)}
         value={mainSkill}
+        />
+        </div>
+        <div className="form-group App-input text-center">Other Talent:{" "} 
+        <input 
+        type="text" 
+        className="form-control"
+        onChange={(e) => setOtherTalents(e.target.value)}
+        value={otherTalents}
         />
         </div>
         <button className="btn btn-success margin-top btn-lg" type="submit"><i class="bi bi-music-note"></i> Seek other Musicians</button>

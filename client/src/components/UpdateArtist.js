@@ -8,6 +8,7 @@ const UpdateArtist = (props) => {
     const [firstName, setFirstName] = useState("");
     const [preferredGenre, setPreferredGenre] = useState("");
     const [mainSkill, setMainSkill] = useState("");
+    const [otherTalents, setOtherTalents] = useState("");
 
     const [id, setId] = useState("");
 
@@ -21,6 +22,7 @@ const UpdateArtist = (props) => {
             firstName,
             preferredGenre,
             mainSkill,
+            otherTalents,
 
         })
         .then((response) => {
@@ -43,7 +45,7 @@ const UpdateArtist = (props) => {
             setFirstName(response.data.firstName);
             setPreferredGenre(response.data.preferredGenre);
             setMainSkill(response.data.mainSkill);
-
+            setOtherTalents(response.data.otherTalents)
             setId(response.data._id);
 
         })
@@ -72,10 +74,16 @@ const UpdateArtist = (props) => {
         value={preferredGenre}
         />
         </div>
-        <div className="form-group margin-top App-input">Main Skill{" "} 
+        <div className="form-group margin-top App-input">Main Skill: {" "} 
         <input type="text" 
         onChange={(e) => setMainSkill(e.target.value)}
         value={mainSkill}
+        />
+        </div>
+        <div className="form-group margin-top App-input">Other Talents: {" "} 
+        <input type="text" 
+        onChange={(e) => setOtherTalents(e.target.value)}
+        value={otherTalents}
         />
         </div>
         <button className="btn margin-top btn-success"type="submit" value="Update"><i class="bi bi-pen"></i>  Update</button>
