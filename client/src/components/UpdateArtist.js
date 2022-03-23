@@ -68,18 +68,21 @@ const UpdateArtist = (props) => {
         value={firstName}
         />
         </div>
+        {errors.firstName ? <p className="App-input errors">{errors.firstName.message}</p> : null}
         <div className="form-group margin-top App-input">Genre of Choice:{" "} 
         <input type="text" 
         onChange={(e) => setPreferredGenre(e.target.value)}
         value={preferredGenre}
         />
         </div>
+        {errors.preferredGenre ? <p className="App-input errors">{errors.preferredGenre.message}</p> : null}
         <div className="form-group margin-top App-input">Main Skill: {" "} 
         <input type="text" 
         onChange={(e) => setMainSkill(e.target.value)}
         value={mainSkill}
         />
         </div>
+        {errors.mainSkill ? <p className=" App-input errors">{errors.mainSkill.message}</p> : null}
         <div className="form-group margin-top App-input">Other Talents: {" "} 
         <input type="text" 
         onChange={(e) => setOtherTalents(e.target.value)}
@@ -87,9 +90,6 @@ const UpdateArtist = (props) => {
         />
         </div>
         <button className="btn margin-top btn-success"type="submit" value="Update"><i class="bi bi-pen"></i>  Update</button>
-        {errors.firstName ? <p>{errors.firstName.message}</p> : null}
-        {errors.preferredGenre ? <p>{errors.preferredGenre.message}</p> : null}
-        {errors.mainSkill ? <p>{errors.mainSkill.message}</p> : null}
 
 
     </form>

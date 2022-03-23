@@ -56,7 +56,7 @@ const ArtistForm = () => {
         value={firstName}
         />
         </div>
-        {errors.firstName ? <p>{errors.firstName.message}</p> : null}
+        {errors.firstName ? <p className="App-input errors">{errors.firstName.message}</p> : null}
         <div className="form-group App-input text-center">Preferred Genre:{" "} 
         <input 
         type="text" 
@@ -65,6 +65,8 @@ const ArtistForm = () => {
         value={preferredGenre}
         />
         </div>
+        {errors.preferredGenre ? <p className="App-input errors">{errors.preferredGenre.message}</p> : null}
+
         <div className="form-group App-input text-center">Main Skill:{" "} 
         <input 
         type="text" 
@@ -73,6 +75,8 @@ const ArtistForm = () => {
         value={mainSkill}
         />
         </div>
+        {errors.mainSkill ? <p className=" App-input errors">{errors.mainSkill.message}</p> : null}
+
         <div className="form-group App-input text-center">Other Talent:{" "} 
         <input 
         type="text" 
